@@ -56,7 +56,6 @@ Shipped with many features
   :::u-page-feature
   ---
   icon: sporty-favicon
-  target: _blank
   to: /members
   ---
   #title
@@ -69,7 +68,6 @@ Shipped with many features
   :::u-page-feature
   ---
   icon: sporty-favicon
-  target: _blank
   to: /leagues
   ---
   #title
