@@ -18,7 +18,7 @@ Our tools made for you.
   ---
   color: neutral
   size: xl
-  to: /getting-started/installation
+  to: /courts
   trailing-icon: i-lucide-arrow-right
   ---
   Get started
