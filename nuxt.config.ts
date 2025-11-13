@@ -2,7 +2,6 @@
 export default defineNuxtConfig({
   modules: ["@nuxt/content", "@nuxt/eslint", "@nuxt/ui"],
     nitro: {
-        preset: 'cloudflare-pages',
         routeRules: {
             '/**': {
                 headers: {
@@ -11,5 +10,14 @@ export default defineNuxtConfig({
                 }
             }
         }
+    },
+    llms: {
+        domain: 'https://www.sporty.plus',
+        title: 'SportyPlus',
+        description: 'Sports management platform',
+        full: {
+            title: 'SportyPlus',
+            description: 'Sports management platform',
+        },
     },
 })

@@ -1,19 +1,17 @@
 ---
 seo:
-  title: Write beautiful docs with Markdown
-  description: Ship fast, flexible, and SEO-optimized documentation with beautiful
-    design out of the box. Docus brings together the best of the Nuxt ecosystem.
-    Powered by Nuxt UI.
+  title: SportyPlus documentation
+  description: Use the most advanced sports management platform on the planet. 
 ---
 
 ::u-page-hero
 #title
-Write beautiful docs with Markdown
+SportyPlus docs
 
 #description
-Ship fast, flexible, and SEO-optimized documentation with beautiful design out of the box.
+Easily manage your sports club, team or school. Use many of our tools to offload many of the tasks to our platform.
 
-Docus brings the best of the Nuxt ecosystem into one CLI.
+Our tools made for you.
 
 #links
   :::u-button
@@ -31,10 +29,10 @@ Docus brings the best of the Nuxt ecosystem into one CLI.
   color: neutral
   icon: simple-icons-github
   size: xl
-  to: https://github.com/nuxt-content/docus
+  to: mailto:info@sporty.plus
   variant: outline
   ---
-  Star on GitHub
+  Contact us
   :::
 ::
 
@@ -46,78 +44,74 @@ Shipped with many features
   :::u-page-feature
   ---
   icon: i-simple-icons-nuxt
-  target: _blank
-  to: https://nuxt.com
+  to: /courts
   ---
   #title
-  Built with [Nuxt 4]{.text-primary}
+  Court and equipment management
   
   #description
-  Optimized by the most famous Vue framework. Docus gives you everything you need to build fast, performant, and SEO-friendly websites.
+  Manage access to courts, playfields, and equipment
   :::
 
   :::u-page-feature
   ---
   icon: i-simple-icons-nuxt
   target: _blank
-  to: https://ui.nuxt.com/
+  to: /members
   ---
   #title
-  Powered by [Nuxt UI]{.text-primary}
+  Member management
   
   #description
-  Beautiful out of the box, minimal by design but highly customizable. Docus leverages Nuxt UI to give you the best docs writing experience with zero boilerplate, just focus on your content.
+  Easily manage members with memberships
   :::
 
   :::u-page-feature
   ---
   icon: i-simple-icons-nuxt
   target: _blank
-  to: https://content.nuxt.com
+  to: /leagues
   ---
   #title
-  Enhanced Markdown syntax by [Nuxt Content]{.text-primary}
+  League management
   
   #description
-  The only thing you need to take care about is writing your content. Write your pages in Markdown and extend with MDC syntax to embed Nuxt UI or custom Vue components. Structure, routing, and rendering are handled for you.
+  Create and manage leagues in any format.
   :::
 
   :::u-page-feature
   ---
   icon: i-simple-icons-nuxt
-  target: _blank
-  to: https://nuxt.com/docs/guide/directory-structure/app-config
+  to: /tournaments
   ---
   #title
-  Customize with [Nuxt App Config]{.text-primary}
+  Tournament management
   
   #description
-  Update colors, social links, header logos and component styles globally using the `app.config.ts`, no direct code modifications required.
+  Create and host tournaments
   :::
 
   :::u-page-feature
   ---
   icon: i-simple-icons-nuxt
-  target: _blank
-  to: https://content.nuxt.com/studio
+  to: /payments
   ---
   #title
-  Collaborate on [Nuxt Studio]{.text-primary}
+  Integrated payments
   
   #description
-  Write and manage your content visually, with zero Markdown knowledge required. Let your non technical colleagues collaborate on the documentation and integrate Vue components without code skills.
+  Integrated payments for all services provided
   :::
 
   :::u-page-feature
   ---
   icon: i-simple-icons-nuxt
-  target: _blank
-  to: https://ui.nuxt.com/components/content-search
+  to: /schools
   ---
   #title
-  Built-in navigation and [full-text search]{.text-primary}
+  School groups and coaches
   
   #description
-  Only focus on ordering your content, Docus handles the search modal and auto-generates the side navigation for you.
+  Enable coaches to manage their own groups.
   :::
 ::
