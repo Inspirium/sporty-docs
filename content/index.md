@@ -27,7 +27,7 @@ Our tools made for you.
   :::u-button
   ---
   color: neutral
-  icon: simple-icons-github
+  icon: sporty-favicon
   size: xl
   to: mailto:info@sporty.plus
   variant: outline
@@ -43,7 +43,7 @@ Shipped with many features
 #features
   :::u-page-feature
   ---
-  icon: i-simple-icons-nuxt
+  icon: sporty-favicon
   to: /courts
   ---
   #title
@@ -55,7 +55,7 @@ Shipped with many features
 
   :::u-page-feature
   ---
-  icon: i-simple-icons-nuxt
+  icon: sporty-favicon
   target: _blank
   to: /members
   ---
@@ -68,7 +68,7 @@ Shipped with many features
 
   :::u-page-feature
   ---
-  icon: i-simple-icons-nuxt
+  icon: sporty-favicon
   target: _blank
   to: /leagues
   ---
@@ -81,7 +81,7 @@ Shipped with many features
 
   :::u-page-feature
   ---
-  icon: i-simple-icons-nuxt
+  icon: sporty-favicon
   to: /tournaments
   ---
   #title
@@ -93,7 +93,7 @@ Shipped with many features
 
   :::u-page-feature
   ---
-  icon: i-simple-icons-nuxt
+  icon: sporty-favicon
   to: /payments
   ---
   #title
@@ -105,7 +105,7 @@ Shipped with many features
 
   :::u-page-feature
   ---
-  icon: i-simple-icons-nuxt
+  icon: sporty-favicon
   to: /schools
   ---
   #title

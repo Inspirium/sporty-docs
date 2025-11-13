@@ -20,4 +20,12 @@ export default defineNuxtConfig({
             description: 'Sports management platform',
         },
     },
+    icon: {
+        customCollections: [
+            {
+                prefix: "sporty",
+                dir: "app/assets/icons",
+            }
+            ]
+    }
 })
