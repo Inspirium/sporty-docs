@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
   modules: ["@nuxt/content", "@nuxt/eslint", "@nuxt/ui"],
     nitro: {
+        preset: 'cloudflare-pages',
         routeRules: {
             '/**': {
                 headers: {

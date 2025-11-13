@@ -1,8 +1,9 @@
 {
-  "name": "docus-starter",
+  "name": "sportyplus-docs",
   "scripts": {
     "dev": "nuxt dev --extends docus",
-    "build": "nuxt build --extends docus"
+    "build": "nuxt build --extends docus",
+    "deploy": "npx wrangler pages deploy dist"
   },
   "dependencies": {
     "@nuxt/content": "3.8.0",
