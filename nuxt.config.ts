@@ -5,6 +5,9 @@ export default defineNuxtConfig({
   site: {
     name: 'SportyPlus',
   },
+  mcp: {
+    enabled: false,
+  },
     nitro: {
         preset: 'cloudflare-pages',
         routeRules: {
