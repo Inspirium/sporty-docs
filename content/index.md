@@ -18,7 +18,7 @@ Our tools made for you.
   ---
   color: neutral
   size: xl
-  to: /courts
+  to: /interface/courts
   trailing-icon: i-lucide-arrow-right
   ---
   Get started
@@ -44,7 +44,7 @@ Shipped with many features
   :::u-page-feature
   ---
   icon: sporty-favicon
-  to: /courts
+  to: /interface/courts
   ---
   #title
   Court and equipment management
@@ -56,7 +56,7 @@ Shipped with many features
   :::u-page-feature
   ---
   icon: sporty-favicon
-  to: /members
+  to: /interface/members
   ---
   #title
   Member management
@@ -68,7 +68,7 @@ Shipped with many features
   :::u-page-feature
   ---
   icon: sporty-favicon
-  to: /leagues
+  to: /interface/leagues
   ---
   #title
   League management
@@ -80,7 +80,7 @@ Shipped with many features
   :::u-page-feature
   ---
   icon: sporty-favicon
-  to: /tournaments
+  to: /interface/tournaments
   ---
   #title
   Tournament management
@@ -92,7 +92,7 @@ Shipped with many features
   :::u-page-feature
   ---
   icon: sporty-favicon
-  to: /payments
+  to: /interface/payments
   ---
   #title
   Integrated payments
@@ -104,7 +104,7 @@ Shipped with many features
   :::u-page-feature
   ---
   icon: sporty-favicon
-  to: /schools
+  to: /interface/schools
   ---
   #title
   School groups and coaches
