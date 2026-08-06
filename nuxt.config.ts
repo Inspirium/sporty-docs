@@ -2,6 +2,14 @@
 export default defineNuxtConfig({
   ssr: false,
   modules: ["@nuxt/content", "@nuxt/eslint", "@nuxt/ui"],
+  content: {
+    experimental: {
+      nativeSqlite: true,
+    },
+  },
+  ogImage: {
+    enabled: false,
+  },
   site: {
     name: 'SportyPlus',
   },
