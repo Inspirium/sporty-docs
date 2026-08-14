@@ -27,7 +27,7 @@ Our tools made for you.
   :::u-button
   ---
   color: neutral
-  icon: sporty-favicon
+  icon: sporty-envelope
   size: xl
   to: mailto:info@sporty.plus
   variant: outline
@@ -43,7 +43,7 @@ Shipped with many features
 #features
   :::u-page-feature
   ---
-  icon: sporty-favicon
+  icon: sporty-court-sport
   to: /interface/courts
   ---
   #title
@@ -55,7 +55,7 @@ Shipped with many features
 
   :::u-page-feature
   ---
-  icon: sporty-favicon
+  icon: sporty-user-group
   to: /interface/members
   ---
   #title
@@ -67,7 +67,7 @@ Shipped with many features
 
   :::u-page-feature
   ---
-  icon: sporty-favicon
+  icon: sporty-ranking-star
   to: /interface/leagues
   ---
   #title
@@ -79,7 +79,7 @@ Shipped with many features
 
   :::u-page-feature
   ---
-  icon: sporty-favicon
+  icon: sporty-trophy
   to: /interface/tournaments
   ---
   #title
@@ -91,7 +91,7 @@ Shipped with many features
 
   :::u-page-feature
   ---
-  icon: sporty-favicon
+  icon: sporty-credit-card
   to: /interface/payments
   ---
   #title
@@ -103,7 +103,7 @@ Shipped with many features
 
   :::u-page-feature
   ---
-  icon: sporty-favicon
+  icon: sporty-graduation-cap
   to: /interface/schools
   ---
   #title
@@ -115,7 +115,7 @@ Shipped with many features
 
   :::u-page-feature
   ---
-  icon: sporty-favicon
+  icon: sporty-bag-shopping
   to: /interface/shop
   ---
   #title
@@ -127,7 +127,7 @@ Shipped with many features
 
   :::u-page-feature
   ---
-  icon: sporty-favicon
+  icon: sporty-browser
   to: /website
   ---
   #title
