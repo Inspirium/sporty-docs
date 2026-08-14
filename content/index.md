@@ -112,4 +112,28 @@ Shipped with many features
   #description
   Enable coaches to manage their own groups.
   :::
+
+  :::u-page-feature
+  ---
+  icon: sporty-favicon
+  to: /interface/shop
+  ---
+  #title
+  Shop and orders
+  
+  #description
+  Sell equipment, memberships, and event tickets from one storefront.
+  :::
+
+  :::u-page-feature
+  ---
+  icon: sporty-favicon
+  to: /website
+  ---
+  #title
+  Website builder
+  
+  #description
+  Build your public website from ready-made content modules.
+  :::
 ::
