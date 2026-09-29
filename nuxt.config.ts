@@ -30,6 +30,9 @@ export default defineNuxtConfig({
             },
         },
         routeRules: {
+            // The old external API is no longer documented; its links land on OAuth
+            '/api': { redirect: { to: '/oauth', statusCode: 301 } },
+            '/api/**': { redirect: { to: '/oauth', statusCode: 301 } },
             '/**': {
                 headers: {
                     'X-Clacks-Overhead': 'GNU Terry Pratchett',
