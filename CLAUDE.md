@@ -5,6 +5,12 @@ repo**, checked out inside `Inspirium/sporty`'s working tree and gitignored ther
 `git` commands run here act on *this* repo, not on `sporty`. Verify with `git remote -v`
 before committing.
 
+## Design
+
+`DESIGN.md` is this site's design system. The docs are a Sporty-owned surface, so they
+wear the brand in full (Sporty blue, Quicksand), whose canonical values live in
+`Inspirium/tennis-web`'s `DESIGN.md`.
+
 ## Related repos — resolve them, never clone them
 
 These repos are one system, and work here often has to read or change another one. On any
