@@ -2,6 +2,7 @@ export default defineAppConfig({
   socials: {
     x: 'https://x.com/Sporty_Plus',
     linkedin: 'https://linkedin.com/company/sportyplus',
+    bluesky: 'https://bsky.app/profile/sporty.plus',
     android: 'https://play.google.com/store/apps/details?id=plus.tenis.app&hl=en&gl=US',
     apple: 'https://apps.apple.com/hr/app/sportyplus/id1619337469',
     gmail: 'mailto:info@sporty.plus'
