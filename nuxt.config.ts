@@ -1,6 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   ssr: true,
+  // Not installed: pnpm-workspace.yaml overrides @nuxt/devtools away.
+  devtools: { enabled: false },
   modules: ["@nuxt/content", "@nuxt/eslint", "@nuxt/ui"],
   content: {
     experimental: {

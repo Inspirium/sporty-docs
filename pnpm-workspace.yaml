@@ -7,6 +7,8 @@ overrides:
   # @nuxt/ui takes tiptap as a ^3 peer, so pnpm kept a vulnerable 3.19.0 (ReDoS, __proto__)
   '@tiptap/core': ^3.31.4
   '@tiptap/pm': ^3.31.4
+  # Not needed for docs, and it pins simple-git to a vulnerable 3.x (devtools: false in nuxt.config)
+  '@nuxt/devtools': '-'
 
 allowBuilds:
   "@parcel/watcher": true
