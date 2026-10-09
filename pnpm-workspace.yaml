@@ -4,6 +4,9 @@ packages:
 overrides:
   sharp: ^0.35.3
   esbuild: ^0.28.2
+  # @nuxt/ui takes tiptap as a ^3 peer, so pnpm kept a vulnerable 3.19.0 (ReDoS, __proto__)
+  '@tiptap/core': ^3.31.4
+  '@tiptap/pm': ^3.31.4
 
 allowBuilds:
   "@parcel/watcher": true
