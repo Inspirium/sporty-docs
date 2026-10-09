@@ -17,18 +17,10 @@ export default defineNuxtConfig({
     enabled: false,
   },
     nitro: {
-        preset: 'cloudflare-pages',
-        // With SSR on, every pre-rendered page gets its own _routes.json exclude
-        // rule, and Cloudflare caps the file at 100: past the cap Nitro drops
-        // the rest, which then hit the Worker and 404 (it has no D1 binding for
-        // @nuxt/content). A wildcard per content section keeps it well under.
-        cloudflare: {
-            pages: {
-                routes: {
-                    exclude: ['/interface/*', '/images/*', '/raw/*'],
-                },
-            },
-        },
+        // A Worker with static assets, deployed with `cf deploy` (cloudflare.config.ts).
+        // Assets are served before the Worker runs, so pre-rendered pages never
+        // reach it — which matters, because it has no D1 binding for @nuxt/content.
+        preset: 'cloudflare_module',
         routeRules: {
             // The old external API is no longer documented; its links land on OAuth
             '/api': { redirect: { to: '/oauth', statusCode: 301 } },

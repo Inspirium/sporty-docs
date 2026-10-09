@@ -59,13 +59,19 @@ For detailed documentation on customizing your Docus project, visit the [Docus D
 
 ## 🚀 Deployment
 
-Build for production:
+The site is a Cloudflare **Worker with static assets** (`sporty-docs` on the Inspirium
+account), serving `docs.sporty.plus`. It is deployed with Cloudflare's
+[`cf` CLI](https://developers.cloudflare.com/cf/), configured in `cloudflare.config.ts`:
 
 ```bash
-npm run build
+pnpm exec cf auth login   # once per machine; cf does not reuse a wrangler login
+pnpm deploy               # nuxt build, then cf deploy
 ```
 
-The built files will be in the `.output` directory, ready for deployment to any hosting provider that supports Node.js.
+`cf deploy` does not run the Nuxt build itself — it bundles whatever is already in
+`.output` — which is why the script builds first. `wrangler.config.ts` only tells `cf`
+where the assets are; `cf` still uses Wrangler's bundler, so `wrangler` stays a dev
+dependency even though nothing runs it directly.
 
 ## 📄 License
 
