@@ -14,6 +14,12 @@ export default defineNuxtConfig({
   },
   site: {
     name: 'SportyPlus',
+    url: 'https://docs.sporty.plus',
+  },
+  sitemap: {
+    // Build it at prerender time: the Worker has no D1 binding, so at runtime
+    // @nuxt/content finds no pages and the sitemap comes out as an empty urlset.
+    zeroRuntime: true,
   },
   mcp: {
     enabled: false,
@@ -24,9 +30,13 @@ export default defineNuxtConfig({
         // reach it — which matters, because it has no D1 binding for @nuxt/content.
         preset: 'cloudflare_module',
         routeRules: {
-            // The old external API is no longer documented; its links land on OAuth
+            // The old external API is no longer documented; its links land on OAuth.
+            // Only the removed pages: an '/api/**' rule would also catch
+            // /api/__sitemap__/urls, which the sitemap reads its URLs from.
             '/api': { redirect: { to: '/oauth', statusCode: 301 } },
-            '/api/**': { redirect: { to: '/oauth', statusCode: 301 } },
+            '/api/courts': { redirect: { to: '/oauth', statusCode: 301 } },
+            '/api/reservations': { redirect: { to: '/oauth', statusCode: 301 } },
+            '/api/users': { redirect: { to: '/oauth', statusCode: 301 } },
             '/**': {
                 headers: {
                     'X-Clacks-Overhead': 'GNU Terry Pratchett',
