@@ -53,7 +53,7 @@ ask for the path — don't clone, and don't fall back to a guess.
 
 ## Deploy
 
-`docs.sporty.plus` is a Worker with static assets, deployed with `pnpm deploy` (`cf`, not
+`docs.sporty.plus` is a Worker with static assets, deployed with `pnpm run deploy` (`cf`, not
 `wrangler`). It moved off the `sporty-docs` **Pages** project on 2026-10-09, and `cf` has
 no Pages commands, so don't go back to `wrangler pages deploy`. Static files are served
 before the Worker runs; `/api` is the exception (`runWorkerFirst` in

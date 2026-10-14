@@ -65,7 +65,7 @@ account), serving `docs.sporty.plus`. It is deployed with Cloudflare's
 
 ```bash
 pnpm exec cf auth login   # once per machine; cf does not reuse a wrangler login
-pnpm deploy               # nuxt build, then cf deploy
+pnpm run deploy          # nuxt build, then cf deploy
 ```
 
 `cf deploy` does not run the Nuxt build itself — it bundles whatever is already in
