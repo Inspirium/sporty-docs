@@ -59,19 +59,26 @@ For detailed documentation on customizing your Docus project, visit the [Docus D
 
 ## 🚀 Deployment
 
-The site is a Cloudflare **Worker with static assets** (`sporty-docs` on the Inspirium
-account), serving `docs.sporty.plus`. It is deployed with Cloudflare's
+The site is fully static: `nuxt generate` pre-renders every page into `dist/`, and it is
+served as an **assets-only Cloudflare Worker** (`sporty-docs` on the Inspirium account, no
+Worker code) at `docs.sporty.plus`. It is deployed with Cloudflare's
 [`cf` CLI](https://developers.cloudflare.com/cf/), configured in `cloudflare.config.ts`:
 
 ```bash
 pnpm exec cf auth login   # once per machine; cf does not reuse a wrangler login
-pnpm run deploy          # nuxt build, then cf deploy
+pnpm run deploy          # nuxt generate, then cf deploy
 ```
 
-`cf deploy` does not run the Nuxt build itself — it bundles whatever is already in
-`.output` — which is why the script builds first. `wrangler.config.ts` only tells `cf`
-where the assets are; `cf` still uses Wrangler's bundler, so `wrangler` stays a dev
+`cf deploy` does not run the Nuxt build itself — it uploads whatever is already in
+`dist` — which is why the script builds first. `wrangler.config.ts` only tells `cf`
+where the assets are; `cf` still uses Wrangler under the hood, so `wrangler` stays a dev
 dependency even though nothing runs it directly.
+
+Nothing runs on the server at request time. The `routeRules` in `nuxt.config.ts` become
+`dist/_redirects` (the `/api` → `/oauth` 301s) and `dist/_headers`, and an unknown path
+gets `dist/404.html` (`notFoundHandling: "404-page"`), which renders the error page in the
+browser. There used to be a Worker for server-side rendering, but @nuxt/content has no D1
+database there, so every 404 logged a burst of `binding DB not found` errors.
 
 ## 📄 License
 

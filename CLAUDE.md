@@ -53,8 +53,10 @@ ask for the path — don't clone, and don't fall back to a guess.
 
 ## Deploy
 
-`docs.sporty.plus` is a Worker with static assets, deployed with `pnpm run deploy` (`cf`, not
-`wrangler`). It moved off the `sporty-docs` **Pages** project on 2026-10-09, and `cf` has
-no Pages commands, so don't go back to `wrangler pages deploy`. Static files are served
-before the Worker runs; `/api` is the exception (`runWorkerFirst` in
-`cloudflare.config.ts`) so its `routeRules` 301 still fires. See README → Deployment.
+`docs.sporty.plus` is a fully static site (`nuxt generate` → `dist/`) served as an
+assets-only Worker, deployed with `pnpm run deploy` (`cf`, not `wrangler`). It moved off
+the `sporty-docs` **Pages** project on 2026-10-09, and `cf` has no Pages commands, so don't
+go back to `wrangler pages deploy`. There is no Worker code: redirects and headers come
+from `routeRules` via `dist/_redirects` and `dist/_headers`, and unknown paths get
+`dist/404.html`. Don't add server routes or `runWorkerFirst` — a server-side render queries
+@nuxt/content's D1 database, which doesn't exist. See README → Deployment.
