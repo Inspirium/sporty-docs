@@ -1,22 +1,17 @@
-import { bindings, defineConfig } from "cf/config";
+import { defineConfig } from "cf/config";
 
 export default defineConfig({
 	accountId: "fead588365c921330737e4e14ab625e6",
 	worker: {
 		name: "sporty-docs",
 		compatibilityDate: "2026-10-01",
-		compatibilityFlags: [
-			"nodejs_compat",
-		],
-		entrypoint: ".output/server/index.mjs",
 		domains: ["docs.sporty.plus"],
-		// Nitro pre-renders /api as a meta-refresh page, which assets would serve
-		// with a 200; let the Worker answer first so the routeRules 301 applies.
+		// Static assets only, no Worker code: every page is pre-rendered by `nuxt generate`,
+		// redirects come from dist/_redirects and headers from dist/_headers. An unknown
+		// path gets dist/404.html instead of reaching a server-side render that has no
+		// D1 binding for @nuxt/content.
 		assets: {
-			runWorkerFirst: ["/api", "/api/*"],
-		},
-		env: {
-			ASSETS: bindings.assets(),
+			notFoundHandling: "404-page",
 		},
 	},
 });
