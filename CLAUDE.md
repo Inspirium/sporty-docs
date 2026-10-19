@@ -11,6 +11,17 @@ before committing.
 wear the brand in full (Sporty blue, Quicksand), whose canonical values live in
 `Inspirium/tennis-web`'s `DESIGN.md`.
 
+## Translations
+
+English in `content/en/` is the source; `content/hr/` and `content/fr/` mirror it file
+for file, with the same paths and English slugs, so the language switcher can map each
+page to its translation. Every URL has a locale prefix (`/en/…`). Docus enforces this, and
+`routeRules` redirect the old unprefixed paths. A change to an English page needs the
+same change in both translations. Keep the heading structure identical, and point
+internal links at the page's own locale (`/hr/…`). Anchors use the translated heading's
+slug. Docus has no Croatian UI strings, so `i18n/locales/hr.json` and
+`modules/docus-hr-locale.ts` supply them.
+
 ## Related repos — resolve them, never clone them
 
 These repos are one system, and work here often has to read or change another one. On any

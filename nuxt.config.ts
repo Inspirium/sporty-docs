@@ -6,7 +6,18 @@ export default defineNuxtConfig({
   ssr: true,
   // Not installed: pnpm-workspace.yaml overrides @nuxt/devtools away.
   devtools: { enabled: false },
-  modules: ["@nuxt/content", "@nuxt/eslint", "@nuxt/ui"],
+  modules: ["@nuxt/content", "@nuxt/eslint", "@nuxt/ui", "@nuxtjs/i18n"],
+  // Docus switches the strategy to `prefix`, so every page lives under its locale
+  // (/en/…, /hr/…, /fr/…); the routeRules below redirect the old unprefixed URLs.
+  // Docus ships no Croatian UI strings, so modules/docus-hr-locale.ts adds them.
+  i18n: {
+    defaultLocale: "en",
+    locales: [
+      { code: "en", name: "English" },
+      { code: "hr", name: "Hrvatski" },
+      { code: "fr", name: "Français" },
+    ],
+  },
   content: {
     experimental: {
       nativeSqlite: true,
@@ -62,10 +73,18 @@ export default defineNuxtConfig({
             // The old external API is no longer documented; its links land on OAuth.
             // Only the removed pages: an '/api/**' rule would also catch
             // /api/__sitemap__/urls, which the sitemap reads its URLs from.
-            '/api': { redirect: { to: '/oauth', statusCode: 301 } },
-            '/api/courts': { redirect: { to: '/oauth', statusCode: 301 } },
-            '/api/reservations': { redirect: { to: '/oauth', statusCode: 301 } },
-            '/api/users': { redirect: { to: '/oauth', statusCode: 301 } },
+            '/api': { redirect: { to: '/en/oauth', statusCode: 301 } },
+            '/api/courts': { redirect: { to: '/en/oauth', statusCode: 301 } },
+            '/api/reservations': { redirect: { to: '/en/oauth', statusCode: 301 } },
+            '/api/users': { redirect: { to: '/en/oauth', statusCode: 301 } },
+            // Every page is under a locale prefix and there is no index.html at the root.
+            '/': { redirect: { to: '/en', statusCode: 302 } },
+            // Pages moved under /en when the docs gained translations; the CMS, the
+            // blog and the AI chat still link to the old paths.
+            ...Object.fromEntries(['getting-started', 'interface', 'website', 'members', 'oauth'].flatMap(section => [
+                [`/${section}`, { redirect: { to: `/en/${section}`, statusCode: 301 } }],
+                [`/${section}/**`, { redirect: { to: `/en/${section}/:splat`, statusCode: 301 } }],
+            ])),
             '/**': {
                 headers: {
                     'X-Clacks-Overhead': 'GNU Terry Pratchett',

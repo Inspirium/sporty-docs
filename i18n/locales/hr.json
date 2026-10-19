@@ -1,0 +1,77 @@
+{
+  "common": {
+    "or": "ili",
+    "error": {
+      "title": "Stranica nije pronađena",
+      "description": "Nažalost, ova stranica ne postoji."
+    }
+  },
+  "docs": {
+    "copy": {
+      "page": "Kopiraj stranicu",
+      "link": "Kopiraj Markdown stranicu",
+      "view": "Prikaži kao Markdown",
+      "gpt": "Otvori u ChatGPT-u",
+      "claude": "Otvori u Claudeu"
+    },
+    "links": "Zajednica",
+    "toc": "Na ovoj stranici",
+    "menu": "Izbornik",
+    "report": "Prijavi problem",
+    "edit": "Uredi ovu stranicu"
+  },
+  "logo": {
+    "copyLogo": "Kopiraj logo",
+    "copyWordmark": "Kopiraj natpis",
+    "downloadLogo": "Preuzmi logo",
+    "downloadWordmark": "Preuzmi natpis",
+    "brandAssets": "Materijali brenda",
+    "logoCopied": "Logo je kopiran",
+    "wordmarkCopied": "Natpis je kopiran",
+    "logoDownloaded": "Logo je preuzet",
+    "wordmarkDownloaded": "Natpis je preuzet",
+    "copyLogoFailed": "Kopiranje loga nije uspjelo",
+    "copyWordmarkFailed": "Kopiranje natpisa nije uspjelo"
+  },
+  "assistant": {
+    "title": "Pitaj AI",
+    "placeholder": "Postavi pitanje...",
+    "tooltip": "Postavi pitanje AI-ju",
+    "tryAsking": "Pokušaj postaviti pitanje",
+    "askAnything": "Pitaj bilo što...",
+    "clearChat": "Očisti razgovor",
+    "close": "Zatvori",
+    "expand": "Proširi",
+    "collapse": "Sažmi",
+    "askMeAnything": "Pitaj bilo što",
+    "askMeAnythingDescription": "Pomoć u snalaženju u dokumentaciji, razumijevanju pojmova i pronalaženju odgovora.",
+    "faq": "Česta pitanja",
+    "chatCleared": "Razgovor se briše kad osvježiš stranicu",
+    "lineBreak": "Novi red",
+    "explainWithAi": "Objasni uz AI",
+    "toolListPages": "Popis stranica dokumentacije",
+    "toolReadPage": "Pročitano",
+    "tools": {
+      "searching": "Pretražujem",
+      "searched": "Pretraženo",
+      "reading": "Čitam",
+      "read": "Pročitano",
+      "finding": "Tražim",
+      "found": "Pronađeno",
+      "opening": "Otvaram",
+      "opened": "Otvoreno",
+      "generating": "Generiram",
+      "generated": "Generirano",
+      "creating": "Stvaram",
+      "created": "Stvoreno"
+    },
+    "loading": {
+      "thinking": "Razmišljam...",
+      "searching": "Pretražujem dokumentaciju",
+      "reading": "Čitam dokumentaciju",
+      "analyzing": "Analiziram sadržaj",
+      "finding": "Tražim najbolji odgovor",
+      "finished": "Korišteni izvori"
+    }
+  }
+}
